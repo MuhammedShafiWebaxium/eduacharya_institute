@@ -6,6 +6,8 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { useEffect } from "react";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 import styles from "../styles.css?url";
 
 const organizationSchema = {
@@ -61,7 +63,7 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "canonical", href: "https://eduacharyainstitute.in/" },
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.svg`, type: "image/svg+xml" },
       { rel: "stylesheet", href: styles },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -79,52 +81,19 @@ export const Route = createRootRoute({
 
 function RootLayout() {
   useEffect(() => {
-    let animationFrame = 0;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const onClick = (event: MouseEvent) => {
-      const link = (event.target as Element | null)?.closest<HTMLAnchorElement>('a[href^="#"]');
-      if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const lenis = new Lenis({
+      autoRaf: true,
+      smoothWheel: true,
+      lerp: 0.1,
+      syncTouch: false,
+      anchors: {
+        offset: window.innerWidth <= 720 ? -78 : -100,
+      },
+    });
 
-      const hash = link.getAttribute("href");
-      if (!hash || hash === "#") return;
-      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
-      if (!target) return;
-
-      event.preventDefault();
-      cancelAnimationFrame(animationFrame);
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const offset = window.innerWidth <= 720 ? 78 : 100;
-      const start = window.scrollY;
-      const destination = Math.max(0, target.getBoundingClientRect().top + start - offset);
-
-      if (reducedMotion) {
-        window.scrollTo(0, destination);
-        window.history.pushState(null, "", hash);
-        return;
-      }
-
-      const distance = destination - start;
-      const duration = Math.min(1250, Math.max(750, Math.abs(distance) * 0.55));
-      const startedAt = performance.now();
-      const easeInOutQuint = (progress: number) => progress < 0.5
-        ? 16 * progress ** 5
-        : 1 - Math.pow(-2 * progress + 2, 5) / 2;
-
-      const animate = (now: number) => {
-        const progress = Math.min(1, (now - startedAt) / duration);
-        window.scrollTo(0, start + distance * easeInOutQuint(progress));
-        if (progress < 1) animationFrame = requestAnimationFrame(animate);
-        else window.history.pushState(null, "", hash);
-      };
-
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    document.addEventListener("click", onClick);
-    return () => {
-      document.removeEventListener("click", onClick);
-      cancelAnimationFrame(animationFrame);
-    };
+    return () => lenis.destroy();
   }, []);
 
   return <Outlet />;
