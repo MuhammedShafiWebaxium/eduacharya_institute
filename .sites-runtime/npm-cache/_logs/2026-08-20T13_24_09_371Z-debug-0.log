@@ -1,0 +1,347 @@
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.21.0
+3 silly config load:file:C:\Users\WEBAXIUM-PC1\AppData\Local\nvm\v22.21.0\node_modules\npm\npmrc
+4 silly config load:file:F:\workspase\webaxium.org\eduacharya-institute\.npmrc
+5 silly config load:file:C:\Users\WEBAXIUM-PC1\.npmrc
+6 silly config load:file:C:\nvm4w\nodejs\etc\npmrc
+7 verbose title npm install lenis
+8 verbose argv "install" "lenis"
+9 verbose logfile logs-max:10 dir:F:\workspase\webaxium.org\eduacharya-institute\.sites-runtime\npm-cache\_logs\2026-08-20T13_24_09_371Z-
+10 verbose logfile F:\workspase\webaxium.org\eduacharya-institute\.sites-runtime\npm-cache\_logs\2026-08-20T13_24_09_371Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest lenis@*
+16 silly packumentCache full:https://registry.npmjs.org/lenis cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/lenis 242ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/lenis set size:undefined disposed:false
+19 silly fetch manifest @nuxt/kit@>=3.0.0
+20 silly packumentCache full:https://registry.npmjs.org/@nuxt%2fkit cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/@nuxt%2fkit 265ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/@nuxt%2fkit set size:undefined disposed:false
+23 silly fetch manifest react@19.2.8
+24 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/react 276ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+27 silly fetch manifest vue@>=3.0.0
+28 silly packumentCache full:https://registry.npmjs.org/vue cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/vue 113ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/vue set size:undefined disposed:false
+31 silly fetch manifest typescript@5.9.3
+32 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/typescript 317ms (cache miss)
+34 silly packumentCache full:https://registry.npmjs.org/typescript set size:undefined disposed:false
+35 silly placeDep ROOT lenis@1.3.26 OK for: eduacharya-institute@0.1.0 want: *
+36 silly reify moves {}
+37 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\fsevents
+38 silly reify mark deleted [
+38 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\fsevents'
+38 silly reify ]
+39 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-win32-arm64-msvc
+40 silly reify mark deleted [
+40 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+40 silly reify ]
+41 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-openharmony-arm64
+42 silly reify mark deleted [
+42 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-openharmony-arm64'
+42 silly reify ]
+43 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-linux-x64-musl
+44 silly reify mark deleted [
+44 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-linux-x64-musl'
+44 silly reify ]
+45 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-linux-x64-gnu
+46 silly reify mark deleted [
+46 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+46 silly reify ]
+47 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-linux-s390x-gnu
+48 silly reify mark deleted [
+48 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+48 silly reify ]
+49 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-linux-ppc64-gnu
+50 silly reify mark deleted [
+50 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+50 silly reify ]
+51 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-linux-arm64-musl
+52 silly reify mark deleted [
+52 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+52 silly reify ]
+53 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-linux-arm64-gnu
+54 silly reify mark deleted [
+54 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+54 silly reify ]
+55 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-linux-arm-gnueabihf
+56 silly reify mark deleted [
+56 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+56 silly reify ]
+57 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-freebsd-x64
+58 silly reify mark deleted [
+58 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-freebsd-x64'
+58 silly reify ]
+59 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-darwin-x64
+60 silly reify mark deleted [
+60 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-darwin-x64'
+60 silly reify ]
+61 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-darwin-arm64
+62 silly reify mark deleted [
+62 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-darwin-arm64'
+62 silly reify ]
+63 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-android-arm64
+64 silly reify mark deleted [
+64 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-android-arm64'
+64 silly reify ]
+65 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@rolldown\binding-android-arm-eabi
+66 silly reify mark deleted [
+66 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@rolldown\\binding-android-arm-eabi'
+66 silly reify ]
+67 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\win32-ia32
+68 silly reify mark deleted [
+68 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\win32-ia32'
+68 silly reify ]
+69 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\win32-arm64
+70 silly reify mark deleted [
+70 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\win32-arm64'
+70 silly reify ]
+71 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\sunos-x64
+72 silly reify mark deleted [
+72 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\sunos-x64'
+72 silly reify ]
+73 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\openharmony-arm64
+74 silly reify mark deleted [
+74 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\openharmony-arm64'
+74 silly reify ]
+75 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\openbsd-x64
+76 silly reify mark deleted [
+76 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\openbsd-x64'
+76 silly reify ]
+77 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\openbsd-arm64
+78 silly reify mark deleted [
+78 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\openbsd-arm64'
+78 silly reify ]
+79 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\netbsd-x64
+80 silly reify mark deleted [
+80 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\netbsd-x64'
+80 silly reify ]
+81 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\netbsd-arm64
+82 silly reify mark deleted [
+82 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\netbsd-arm64'
+82 silly reify ]
+83 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-x64
+84 silly reify mark deleted [
+84 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-x64'
+84 silly reify ]
+85 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-s390x
+86 silly reify mark deleted [
+86 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-s390x'
+86 silly reify ]
+87 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-riscv64
+88 silly reify mark deleted [
+88 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-riscv64'
+88 silly reify ]
+89 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-ppc64
+90 silly reify mark deleted [
+90 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-ppc64'
+90 silly reify ]
+91 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-mips64el
+92 silly reify mark deleted [
+92 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-mips64el'
+92 silly reify ]
+93 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-loong64
+94 silly reify mark deleted [
+94 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-loong64'
+94 silly reify ]
+95 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-ia32
+96 silly reify mark deleted [
+96 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-ia32'
+96 silly reify ]
+97 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-arm64
+98 silly reify mark deleted [
+98 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-arm64'
+98 silly reify ]
+99 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\linux-arm
+100 silly reify mark deleted [
+100 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\linux-arm'
+100 silly reify ]
+101 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\freebsd-x64
+102 silly reify mark deleted [
+102 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\freebsd-x64'
+102 silly reify ]
+103 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\freebsd-arm64
+104 silly reify mark deleted [
+104 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\freebsd-arm64'
+104 silly reify ]
+105 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\darwin-x64
+106 silly reify mark deleted [
+106 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\darwin-x64'
+106 silly reify ]
+107 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\darwin-arm64
+108 silly reify mark deleted [
+108 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\darwin-arm64'
+108 silly reify ]
+109 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\android-x64
+110 silly reify mark deleted [
+110 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\android-x64'
+110 silly reify ]
+111 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\android-arm64
+112 silly reify mark deleted [
+112 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\android-arm64'
+112 silly reify ]
+113 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\android-arm
+114 silly reify mark deleted [
+114 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\android-arm'
+114 silly reify ]
+115 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@esbuild\aix-ppc64
+116 silly reify mark deleted [
+116 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@esbuild\\aix-ppc64'
+116 silly reify ]
+117 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-win32-arm64-msvc
+118 silly reify mark deleted [
+118 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-win32-arm64-msvc'
+118 silly reify ]
+119 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-linux-x64-musl
+120 silly reify mark deleted [
+120 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-linux-x64-musl'
+120 silly reify ]
+121 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-linux-x64-gnu
+122 silly reify mark deleted [
+122 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-linux-x64-gnu'
+122 silly reify ]
+123 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-linux-arm64-musl
+124 silly reify mark deleted [
+124 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-linux-arm64-musl'
+124 silly reify ]
+125 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-linux-arm64-gnu
+126 silly reify mark deleted [
+126 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-linux-arm64-gnu'
+126 silly reify ]
+127 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-linux-arm-gnueabihf
+128 silly reify mark deleted [
+128 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-linux-arm-gnueabihf'
+128 silly reify ]
+129 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-freebsd-x64
+130 silly reify mark deleted [
+130 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-freebsd-x64'
+130 silly reify ]
+131 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-darwin-x64
+132 silly reify mark deleted [
+132 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-darwin-x64'
+132 silly reify ]
+133 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-darwin-arm64
+134 silly reify mark deleted [
+134 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-darwin-arm64'
+134 silly reify ]
+135 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\vite\node_modules\lightningcss-android-arm64
+136 silly reify mark deleted [
+136 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\vite\\node_modules\\lightningcss-android-arm64'
+136 silly reify ]
+137 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-win32-arm64-msvc
+138 silly reify mark deleted [
+138 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-win32-arm64-msvc'
+138 silly reify ]
+139 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-linux-x64-musl
+140 silly reify mark deleted [
+140 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-linux-x64-musl'
+140 silly reify ]
+141 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-linux-x64-gnu
+142 silly reify mark deleted [
+142 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-linux-x64-gnu'
+142 silly reify ]
+143 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-linux-arm64-musl
+144 silly reify mark deleted [
+144 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-linux-arm64-musl'
+144 silly reify ]
+145 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-linux-arm64-gnu
+146 silly reify mark deleted [
+146 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-linux-arm64-gnu'
+146 silly reify ]
+147 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-linux-arm-gnueabihf
+148 silly reify mark deleted [
+148 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-linux-arm-gnueabihf'
+148 silly reify ]
+149 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-freebsd-x64
+150 silly reify mark deleted [
+150 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-freebsd-x64'
+150 silly reify ]
+151 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-darwin-x64
+152 silly reify mark deleted [
+152 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-darwin-x64'
+152 silly reify ]
+153 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-darwin-arm64
+154 silly reify mark deleted [
+154 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-darwin-arm64'
+154 silly reify ]
+155 verbose reify failed optional dependency F:\workspase\webaxium.org\eduacharya-institute\node_modules\@tanstack\start-plugin-core\node_modules\lightningcss-android-arm64
+156 silly reify mark deleted [
+156 silly reify   'F:\\workspase\\webaxium.org\\eduacharya-institute\\node_modules\\@tanstack\\start-plugin-core\\node_modules\\lightningcss-android-arm64'
+156 silly reify ]
+157 http cache lenis@https://registry.npmjs.org/lenis/-/lenis-1.3.26.tgz 0ms (cache hit)
+158 silly tarball no local data for lenis@https://registry.npmjs.org/lenis/-/lenis-1.3.26.tgz. Extracting by manifest.
+159 http fetch GET 200 https://registry.npmjs.org/lenis/-/lenis-1.3.26.tgz 107ms (cache miss)
+160 silly ADD node_modules/lenis
+161 silly ADD
+162 silly ADD
+163 silly ADD
+164 silly ADD
+165 silly ADD
+166 silly ADD
+167 silly ADD
+168 silly ADD
+169 silly ADD
+170 silly ADD
+171 silly ADD
+172 silly ADD
+173 silly ADD
+174 silly ADD
+175 silly ADD
+176 silly ADD
+177 silly ADD
+178 silly ADD
+179 silly ADD
+180 silly ADD
+181 silly ADD
+182 silly ADD
+183 silly ADD
+184 silly ADD
+185 silly ADD
+186 silly ADD
+187 silly ADD
+188 silly ADD
+189 silly ADD
+190 silly ADD
+191 silly ADD
+192 silly ADD
+193 silly ADD
+194 silly ADD
+195 silly ADD
+196 silly ADD
+197 silly ADD
+198 silly ADD
+199 silly ADD
+200 silly ADD
+201 silly ADD
+202 silly ADD
+203 silly ADD
+204 silly ADD
+205 silly ADD
+206 silly ADD
+207 silly ADD
+208 silly ADD
+209 silly ADD
+210 silly ADD
+211 silly ADD
+212 silly ADD
+213 silly ADD
+214 silly ADD
+215 silly ADD
+216 silly ADD
+217 silly ADD
+218 silly ADD
+219 silly ADD
+220 silly ADD
+221 verbose cwd F:\workspase\webaxium.org\eduacharya-institute
+222 verbose os Windows_NT 10.0.26200
+223 verbose node v22.21.0
+224 verbose npm  v10.9.4
+225 verbose exit 0
+226 info ok
