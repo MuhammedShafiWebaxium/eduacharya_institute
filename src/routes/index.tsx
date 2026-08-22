@@ -440,10 +440,13 @@ function Home() {
           href="#top"
           aria-label="Edu Acharya home"
         >
-          <span className="brand-symbol">EA</span>
-          <span className="brand-name">
-            Edu <b>Acharya</b>
-          </span>
+          <img
+            className="navbar-logo"
+            src="/images/logo_sm_black-CY_9RSwn.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <span className="brand-name">EduAcharya</span>
         </a>
         <nav className={menu ? "open" : ""}>
           <a href="#about">Credit Transfer</a>

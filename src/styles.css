@@ -2374,6 +2374,18 @@ footer .brand-mark {
   overflow: visible;
   flex: none;
 }
+.reference-nav .hero-brand,
+.credit-page-nav .hero-brand {
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+.navbar-logo {
+  display: block;
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+}
 .brand-symbol {
   width: 47px;
   height: 47px;
@@ -2394,6 +2406,19 @@ footer .brand-mark {
 .brand-name b {
   font: 800 25px Manrope;
   color: #FF4301;
+}
+.reference-nav .brand-name,
+.reference-nav .brand-name b,
+.credit-page-nav .brand-name,
+.credit-page-nav .brand-name b {
+  font-size: 19px;
+}
+.reference-nav .brand-name,
+.credit-page-nav .brand-name {
+  display: block;
+  white-space: nowrap;
+  color: #000;
+  font-weight: 800;
 }
 .reference-nav nav {
   gap: 46px;
@@ -2805,18 +2830,24 @@ footer .brand-mark {
     height: 78px;
     padding: 0 18px;
   }
-  .hero-brand {
+  .reference-nav .hero-brand,
+  .credit-page-nav .hero-brand {
     height: 72px;
-    gap: 8px;
+    gap: 0;
+  }
+  .navbar-logo {
+    height: 38px;
   }
   .brand-symbol {
     width: 39px;
     height: 39px;
     font-size: 12px;
   }
-  .brand-name,
-  .brand-name b {
-    font-size: 20px;
+  .reference-nav .brand-name,
+  .reference-nav .brand-name b,
+  .credit-page-nav .brand-name,
+  .credit-page-nav .brand-name b {
+    font-size: 16px;
   }
   .reference-nav nav.open {
     top: 78px;
@@ -6022,6 +6053,7 @@ html {
 .overseas-form-heading h3 {
   font-size: 27px;
   margin-top: 8px;
+  color: #fff;
 }
 .overseas-form label {
   display: flex;
@@ -6032,7 +6064,7 @@ html {
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  color: #d7d1ed;
+  color: #F0E1DA;
   font-weight: 700;
 }
 .overseas-form input,
@@ -6245,6 +6277,16 @@ html {
   }
 }
 @media (max-width: 650px) {
+  .overseas-section {
+    gap: 36px;
+    min-width: 0;
+  }
+  .overseas-copy,
+  .overseas-form {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
   .country-pathways {
     display: flex;
     overflow-x: auto;
@@ -6255,8 +6297,24 @@ html {
   }
   .overseas-form {
     grid-template-columns: 1fr;
-    padding: 26px 22px;
+    padding: 26px 20px;
     border-radius: 25px;
+  }
+  .overseas-form label,
+  .overseas-form input,
+  .overseas-form select,
+  .overseas-form .button {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .overseas-form input,
+  .overseas-form select {
+    font-size: 16px;
+  }
+  .overseas-form-heading h3 {
+    font-size: 23px;
+    line-height: 1.2;
   }
   .overseas-form-heading,
   .overseas-form .button,
@@ -6288,6 +6346,13 @@ html {
   .footer-line,
   .footer-address {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .overseas-form {
+    padding: 23px 16px;
+    border-radius: 22px;
   }
 }
 

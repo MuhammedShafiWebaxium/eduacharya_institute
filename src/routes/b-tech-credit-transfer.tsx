@@ -32,7 +32,15 @@ function CreditTransferPage() {
   return (
     <main className="credit-page">
       <header className="credit-page-nav">
-        <Link className="brand hero-brand" to="/"><span className="brand-symbol">EA</span><span className="brand-name">Edu <b>Acharya</b></span></Link>
+        <Link className="brand hero-brand" to="/">
+          <img
+            className="navbar-logo"
+            src="/images/logo_sm_black-CY_9RSwn.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <span className="brand-name">EduAcharya</span>
+        </Link>
         <Link className="credit-back" to="/"><ArrowLeft /> Back to home</Link>
       </header>
 
