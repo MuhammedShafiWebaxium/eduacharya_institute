@@ -464,7 +464,7 @@ function Home() {
         >
           <img
             className="navbar-logo"
-            src="/images/logo_sm_black-CY_9RSwn.png"
+            src={publicPath("/images/logo_sm_black-CY_9RSwn.png")}
             alt=""
             aria-hidden="true"
           />

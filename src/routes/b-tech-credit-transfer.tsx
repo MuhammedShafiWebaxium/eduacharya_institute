@@ -35,7 +35,7 @@ function CreditTransferPage() {
         <Link className="brand hero-brand" to="/">
           <img
             className="navbar-logo"
-            src="/images/logo_sm_black-CY_9RSwn.png"
+            src={`${import.meta.env.BASE_URL}images/logo_sm_black-CY_9RSwn.png`}
             alt=""
             aria-hidden="true"
           />
