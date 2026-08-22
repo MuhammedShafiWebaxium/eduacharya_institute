@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   BadgeCheck,
@@ -432,6 +432,28 @@ function Home() {
   const [menu, setMenu] = useState(false);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [overseasSent, setOverseasSent] = useState(false);
+  const [eligibilityOpen, setEligibilityOpen] = useState(false);
+
+  useEffect(() => {
+    if (!eligibilityOpen) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setEligibilityOpen(false);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [eligibilityOpen]);
+
+  const openEligibility = () => {
+    setMenu(false);
+    setEligibilityOpen(true);
+  };
   return (
     <main>
       <header className="nav reference-nav">
@@ -459,7 +481,14 @@ function Home() {
           <a className="login" href="https://eduacharyaerp.in">
             Student Login
           </a>
-          <a className="button primary" href="#eligibility">
+          <a
+            className="button primary"
+            href="#eligibility"
+            onClick={(event) => {
+              event.preventDefault();
+              openEligibility();
+            }}
+          >
             Check Eligibility
           </a>
           <button
@@ -489,7 +518,14 @@ function Home() {
             with expert guidance.
           </p>
           <div className="visual-hero-actions">
-            <a className="button primary" href="#eligibility">
+            <a
+              className="button primary"
+              href="#eligibility"
+              onClick={(event) => {
+                event.preventDefault();
+                openEligibility();
+              }}
+            >
               Check My Eligibility <MoveRight size={18} />
             </a>
             <a className="button outline" href="tel:+919746363807">
@@ -723,7 +759,14 @@ function Home() {
             </span>
           </div>
           <div className="hero-buttons">
-            <a className="button primary" href="#eligibility">
+            <a
+              className="button primary"
+              href="#eligibility"
+              onClick={(event) => {
+                event.preventDefault();
+                openEligibility();
+              }}
+            >
               Review my academic record <Arrow />
             </a>
             <a className="button text-button" href="#process">
@@ -889,7 +932,13 @@ function Home() {
                     >
                       <GraduationCap /> Explore university
                     </a>
-                    <a href="#eligibility">
+                    <a
+                      href="#eligibility"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        openEligibility();
+                      }}
+                    >
                       Discuss this pathway <Arrow />
                     </a>
                   </div>
@@ -1089,7 +1138,14 @@ function Home() {
                 </summary>
                 <div className="branch-chips">
                   {group.branches.map((branch, index) => (
-                    <a href="#eligibility" key={branch}>
+                    <a
+                      href="#eligibility"
+                      key={branch}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        openEligibility();
+                      }}
+                    >
                       <span>
                         {String(previousCount + index + 1).padStart(2, "0")}
                       </span>
@@ -1109,7 +1165,14 @@ function Home() {
             </span>
             <h3>Let us map your branch and completed subjects.</h3>
           </div>
-          <a className="button primary" href="#eligibility">
+          <a
+            className="button primary"
+            href="#eligibility"
+            onClick={(event) => {
+              event.preventDefault();
+              openEligibility();
+            }}
+          >
             Check branch eligibility <MoveRight />
           </a>
         </div>
@@ -1239,7 +1302,7 @@ function Home() {
             : `View all ${galleryImages.length} photos`}
         </button>
       </section>
-      <section className="section form-section" id="eligibility">
+      <section className="section form-section" hidden>
         <div>
           <span className="kicker light">Free eligibility report</span>
           <h2>
@@ -1374,7 +1437,14 @@ function Home() {
               </span>
             </div>
           </div>
-          <a className="button dark" href="#eligibility">
+          <a
+            className="button dark"
+            href="#eligibility"
+            onClick={(event) => {
+              event.preventDefault();
+              openEligibility();
+            }}
+          >
             Ask a counsellor <MessageCircle />
           </a>
         </div>
@@ -1679,10 +1749,55 @@ function Home() {
           <p>© 2026 EduAcharya Pvt. Ltd. All rights reserved.</p>
         </div>
       </footer>
+      {eligibilityOpen && (
+        <div
+          className="eligibility-modal"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              setEligibilityOpen(false);
+            }
+          }}
+        >
+          <section
+            className="eligibility-modal-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="eligibility-modal-title"
+          >
+            <button
+              className="eligibility-modal-close"
+              type="button"
+              aria-label="Close eligibility form"
+              autoFocus
+              onClick={() => setEligibilityOpen(false)}
+            >
+              ×
+            </button>
+            <header className="eligibility-modal-heading">
+              <span>Free eligibility check</span>
+              <h2 id="eligibility-modal-title">Let’s map your best route.</h2>
+              <p>
+                Share your academic details and our counsellor will review the
+                next steps with you.
+              </p>
+            </header>
+            <LeadForm />
+          </section>
+        </div>
+      )}
       <div className="mobile-cta">
         <a href="tel:+919746363807">Call now</a>
         <a href="https://api.whatsapp.com/send?phone=919633830220">WhatsApp</a>
-        <a href="#eligibility">Apply now</a>
+        <a
+          href="#eligibility"
+          onClick={(event) => {
+            event.preventDefault();
+            openEligibility();
+          }}
+        >
+          Apply now
+        </a>
       </div>
     </main>
   );
