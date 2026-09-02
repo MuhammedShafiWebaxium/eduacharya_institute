@@ -189,7 +189,7 @@ const accreditationItems = [
   {
     code: "UGC",
     name: "University Grants Commission",
-    copy: "University recognition under the applicable UGC framework confirms its status as a recognized private university.",
+    copy: "Statutory recognition under the UGC Act, 1956. Confers recognition to universities in India as a recognized public university.",
     icon: ShieldCheck,
     url: "https://www.tgu.ac.in/grants-commission",
   },
@@ -197,28 +197,28 @@ const accreditationItems = [
     code: "AICTE",
     name: "All India Council for Technical Education",
     copy: "Professional and technical education requirements remain subject to the applicable national and programme-level framework.",
-    icon: BadgeCheck,
+    icon: AicteIcon,
     url: "https://www.tgu.ac.in/university-approvals",
   },
   {
     code: "PCI",
     name: "Pharmacy Council of India",
     copy: "Programme-level recognition supports pharmacy education delivered according to the council's applicable standards.",
-    icon: FileCheck2,
+    icon: PciIcon,
     url: "https://www.tgu.ac.in/university-approvals",
   },
   {
     code: "BCI",
     name: "Bar Council of India",
     copy: "Programme-level recognition supports legal education aligned with the applicable professional requirements.",
-    icon: Landmark,
+    icon: BciIcon,
     url: "https://www.tgu.ac.in/bar-council-of-india",
   },
   {
     code: "AIU",
     name: "Association of Indian Universities",
     copy: "AIU membership supports the university's standing within India's higher-education community and degree-equivalence ecosystem.",
-    icon: GraduationCap,
+    icon: AiuIcon,
     url: "https://www.tgu.ac.in/aiu",
   },
 ];
@@ -323,6 +323,12 @@ const branchGroups = [
     ],
   },
 ];
+const branchGroupBackgrounds = [
+  "core-engineering-line-art.png",
+  "computing-electronics-line-art.png",
+  "advanced-disciplines-line-art.png",
+  "industry-safety-environment-line-art.png",
+];
 const galleryImages = [
   "WhatsApp-Image-2025-12-19-at-2.42.07-PM-1.jpeg",
   "WhatsApp-Image-2025-12-19-at-2.42.08-PM-1.jpeg",
@@ -353,6 +359,119 @@ const remainingGalleryImages = galleryImages.filter(
 
 function Arrow() {
   return <MoveUpRight aria-hidden="true" size={16} />;
+}
+
+function AccreditationSealIllustration() {
+  return (
+    <svg
+      className="accreditation-seal-art"
+      viewBox="0 0 190 130"
+      fill="none"
+      aria-hidden="true"
+    >
+      <g
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M64 22 95 9l31 13v38c0 24-14 42-31 51-17-9-31-27-31-51V22Z" />
+        <path d="m72 29 23-10 23 10v31c0 18-10 32-23 40-13-8-23-22-23-40V29Z" />
+        <path d="m83 58 9 9 18-21" />
+        <path d="M64 62H46l8 12-10 13h24M126 62h18l-8 12 10 13h-24" />
+        <circle cx="151" cy="37" r="2" />
+        <circle cx="162" cy="50" r="2" />
+        <circle cx="155" cy="65" r="2" />
+        <circle cx="166" cy="78" r="2" />
+        <circle cx="147" cy="92" r="2" />
+        <circle cx="36" cy="43" r="2" />
+        <circle cx="28" cy="61" r="2" />
+        <circle cx="36" cy="101" r="2" />
+      </g>
+    </svg>
+  );
+}
+
+function AcademicApproachIllustration() {
+  return (
+    <svg
+      className="approach-watermark"
+      viewBox="0 0 300 190"
+      fill="none"
+      aria-hidden="true"
+    >
+      <g stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
+        <path d="M38 165V74C38 34 70 14 108 14s70 20 70 60v91" />
+        <path d="M52 165V78c0-31 24-50 56-50s56 19 56 50v87" />
+        <path d="M67 165V82c0-24 18-39 41-39s41 15 41 39v83" />
+        <path d="M78 100c25-10 48-5 70 12v58c-22-17-45-22-70-12v-58Z" />
+        <path d="M218 100c-25-10-48-5-70 12v58c22-17 45-22 70-12v-58Z" />
+        <path d="M148 112v58M68 174h160" />
+      </g>
+    </svg>
+  );
+}
+
+function AicteIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <g
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M9 3h8l3 3v7M9 3v6h6V3M8 19h10" />
+        <path d="M5.5 11.5v-2m0 11v-2m-4-3h2m4 0h2m-6.8-2.8 1.4 1.4m2.8 2.8 1.4 1.4m0-5.6-1.4 1.4m-2.8 2.8-1.4 1.4" />
+        <circle cx="5.5" cy="15.5" r="2.5" />
+      </g>
+    </svg>
+  );
+}
+function PciIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <g
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M5 13h14c-.6 4-3.1 6-7 6s-6.4-2-7-6ZM9 22h6M12 19v3" />
+        <path d="M15 3c-3 0-4 2-3 4s4 1 4 3-3 2-4 3M15 3l2 1-2 1" />
+      </g>
+    </svg>
+  );
+}
+function BciIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <g
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M12 3v18M7 21h10M4 7h16M8 7l-4 7h8L8 7Zm8 0-4 7h8l-4-7Z" />
+        <path d="M4 14c1.5 2 6.5 2 8 0M12 14c1.5 2 6.5 2 8 0" />
+      </g>
+    </svg>
+  );
+}
+function AiuIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <g
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="m3 8 9-4 9 4-9 4-9-4ZM7 10v4c3 2 7 2 10 0v-4M20 9v6" />
+        <path d="M5 19h14M7 19v-3h10v3" />
+      </g>
+    </svg>
+  );
 }
 function LeadForm({ compact = false }: { compact?: boolean }) {
   const [sent, setSent] = useState(false);
@@ -433,6 +552,7 @@ function Home() {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [overseasSent, setOverseasSent] = useState(false);
   const [eligibilityOpen, setEligibilityOpen] = useState(false);
+  const [activeBranchGroup, setActiveBranchGroup] = useState(0);
 
   useEffect(() => {
     if (!eligibilityOpen) return;
@@ -468,7 +588,12 @@ function Home() {
             alt=""
             aria-hidden="true"
           />
-          <span className="brand-name">EduAcharya</span>
+          <span className="brand-copy">
+            <span className="brand-name">EduAcharya</span>
+            <span className="brand-subtitle">
+              Institute of Advanced Management &amp; Technology Pvt. Ltd.
+            </span>
+          </span>
         </a>
         <nav className={menu ? "open" : ""}>
           <a href="#about">Credit Transfer</a>
@@ -669,8 +794,8 @@ function Home() {
         id="about"
         aria-labelledby="credit-transfer-title"
       >
-        <div className="section-heading">
-          <div>
+        <div className="pathway-overview">
+          <div className="pathway-copy">
             <span className="kicker">Understand the pathway</span>
             <h2 id="credit-transfer-title">
               What is B.Tech
@@ -693,6 +818,83 @@ function Home() {
             >
               Explore B.Tech credit transfer <Arrow />
             </a>
+          </div>
+          <div className="credit-path" aria-label="Credit transfer pathway">
+            <article className="credit-path-card university-card">
+              <div className="path-icon">
+                <Landmark />
+              </div>
+              <h3>Previous University</h3>
+              <p>Completed subjects &amp; credits</p>
+              <div className="subject-list">
+                {["Mathematics", "Programming", "Electronics"].map(
+                  (subject, index) => (
+                    <div key={subject}>
+                      {index === 0 ? (
+                        <FileCheck2 />
+                      ) : index === 1 ? (
+                        <Cpu />
+                      ) : (
+                        <BookOpen />
+                      )}
+                      <span>
+                        <b>{subject}</b>
+                        <small>{index + 3} Credits</small>
+                      </span>
+                      <em>Accepted</em>
+                    </div>
+                  ),
+                )}
+              </div>
+            </article>
+            <div className="path-arrow" aria-hidden="true">
+              <span />
+            </div>
+            <article className="credit-path-card evaluation-card">
+              <div className="path-icon dark">
+                <ClipboardCheck />
+              </div>
+              <h3>Credit Evaluation</h3>
+              <p>
+                The receiving university evaluates coursework, grades and
+                relevance.
+              </p>
+              <div className="accepted-note">
+                <ShieldCheck />
+                <b>
+                  Eligible credits
+                  <br />
+                  are accepted
+                </b>
+              </div>
+            </article>
+            <div className="path-arrow" aria-hidden="true">
+              <span />
+            </div>
+            <article className="credit-path-card university-card">
+              <div className="path-icon">
+                <Building2 />
+              </div>
+              <h3>New University</h3>
+              <p>Continue your B.Tech journey</p>
+              <div className="outcome-list">
+                <div>
+                  <FileCheck2 />
+                  <b>Credits transferred</b>
+                  <BadgeCheck />
+                </div>
+                <div>
+                  <ShieldCheck />
+                  <b>No need to repeat</b>
+                  <BadgeCheck />
+                </div>
+                <div>
+                  <GraduationCap />
+                  <b>Continue from next level</b>
+                  <BadgeCheck />
+                </div>
+              </div>
+            </article>
           </div>
         </div>
         <div className="benefits-heading">
@@ -721,13 +923,44 @@ function Home() {
               "Protect academic progress",
               "Resume discontinued studies without losing every eligible credit already earned.",
             ],
-          ].map(([n, t, c]) => (
+          ].map(([n, t, c], index) => (
             <article key={n}>
               <span>{n}</span>
               <h3>{t}</h3>
               <p>{c}</p>
+              <div className="benefit-icon" aria-hidden="true">
+                {index === 0 ? (
+                  <Clock3 />
+                ) : index === 1 ? (
+                  <GraduationCap />
+                ) : index === 2 ? (
+                  <MoveRight />
+                ) : (
+                  <ShieldCheck />
+                )}
+              </div>
             </article>
           ))}
+        </div>
+        <div className="pathway-cta">
+          <div className="pathway-cta-icon">
+            <GraduationCap />
+          </div>
+          <h3>Ready to continue your B.Tech journey?</h3>
+          <p>
+            Check your eligibility and take the next step towards your academic
+            goals.
+          </p>
+          <a
+            className="button primary"
+            href="#eligibility"
+            onClick={(event) => {
+              event.preventDefault();
+              openEligibility();
+            }}
+          >
+            Check My Eligibility <Arrow />
+          </a>
         </div>
       </section>
       <section
@@ -974,12 +1207,15 @@ function Home() {
               <em>credible education.</em>
             </h2>
           </div>
-          <p>
-            Explore The Global University's listed recognition and
-            professional-council pathways. Programme-specific approval,
-            availability and eligibility should always be confirmed for the
-            intended course and admission year.
-          </p>
+          <div className="recognition-intro">
+            <p>
+              Explore The Global University's listed recognition and
+              professional-council pathways. Programme-specific approval,
+              availability and eligibility should always be confirmed for the
+              intended course and admission year.
+            </p>
+            <AccreditationSealIllustration />
+          </div>
         </div>
         <div className="accreditation-grid">
           {accreditationItems.map(
@@ -1000,15 +1236,38 @@ function Home() {
                 <b>{code}</b>
                 <h3>{name}</h3>
                 <p>{copy}</p>
+                {index === 0 && (
+                  <span className="accreditation-status">
+                    <ShieldCheck /> University recognition
+                  </span>
+                )}
                 <i>
                   View recognition source <Arrow />
                 </i>
+                {index === 0 && (
+                  <img
+                    className="ugc-building-art"
+                    src={publicPath(
+                      "/images/ugc-university-building-transparent.png",
+                    )}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                )}
               </a>
             ),
           )}
         </div>
+        <div className="recognition-note">
+          <ShieldCheck />
+          <p>
+            Recognition is programme-specific. Always verify the latest approval
+            and eligibility for your chosen course.
+          </p>
+        </div>
         <div className="education-approach">
-          <div>
+          <div className="education-approach-heading">
+            <AcademicApproachIllustration />
             <span className="kicker">Educational approach</span>
             <h3>
               Accessible learning with
@@ -1052,43 +1311,43 @@ function Home() {
           </p>
         </div>
         <div className="affiliation-marquee">
-          <div className="affiliation-track">
-            {[false, true].map((duplicate) => (
-              <div
-                className="affiliation-group"
-                aria-hidden={duplicate || undefined}
-                key={duplicate ? "duplicate" : "primary"}
-              >
-                {affiliationItems.map((item) => (
-                  <a
-                    href={item.url}
-                    target={item.url.startsWith("#") ? undefined : "_blank"}
-                    rel={item.url.startsWith("#") ? undefined : "noreferrer"}
-                    key={`${duplicate ? "duplicate" : "primary"}-${item.code}`}
-                  >
-                    <span>{item.code}</span>
-                    <div>
-                      <b>{item.label}</b>
-                      <small>
-                        {item.url.startsWith("#")
-                          ? "Discuss eligibility"
-                          : item.url
-                              .replace(/^https?:\/\/(www\.)?/, "")
-                              .split("/")[0]}
-                      </small>
-                    </div>
-                    <Arrow />
-                  </a>
-                ))}
-              </div>
-            ))}
+          <div className="affiliation-group">
+            {affiliationItems
+              .filter((item) =>
+                ["UGC", "AIU", "AICTE", "PCI", "BCI", "WES"].includes(
+                  item.code,
+                ),
+              )
+              .map((item) => (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={item.code}
+                >
+                  <span>{item.code}</span>
+                  <div>
+                    <b>{item.label}</b>
+                    <small>{item.code}</small>
+                  </div>
+                  <Arrow />
+                </a>
+              ))}
           </div>
         </div>
+        <a
+          className="official-resources-link"
+          href="https://www.ugc.gov.in/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View all official resources <Arrow />
+        </a>
       </section>
       <section className="section course-pathways" id="courses">
         <div className="course-pathways-head">
           <div>
-            <span className="kicker">Courses &amp; branches</span>
+            <span className="kicker">Explore your options</span>
             <h2>
               Find the engineering path
               <br />
@@ -1104,57 +1363,84 @@ function Home() {
             </p>
             <div className="course-stats">
               <span>
+                <Building2 />
                 <b>23</b> branches
               </span>
               <span>
+                <GraduationCap />
                 <b>4</b> discipline groups
               </span>
               <span>
+                <ShieldCheck />
                 <b>1:1</b> eligibility review
               </span>
             </div>
           </div>
         </div>
-        <div className="branch-groups compact">
-          {branchGroups.map((group, groupIndex) => {
+        <a className="compare-branches" href="#course-explorer">
+          Compare all branches <MoveRight />
+        </a>
+        <div className="course-tabs" role="tablist" aria-label="Engineering disciplines">
+          {branchGroups.map((group, index) => {
             const Icon = group.icon;
-            const previousCount = branchGroups
-              .slice(0, groupIndex)
-              .reduce((total, item) => total + item.branches.length, 0);
             return (
-              <details key={group.title}>
-                <summary className="branch-group-heading">
-                  <span>
-                    <Icon />
-                  </span>
-                  <div>
-                    <small>Discipline 0{groupIndex + 1}</small>
-                    <h3>{group.title}</h3>
-                    <p>{group.copy}</p>
-                  </div>
-                  <i>
-                    <ChevronDown />
-                  </i>
-                </summary>
-                <div className="branch-chips">
-                  {group.branches.map((branch, index) => (
-                    <a
-                      href="#eligibility"
-                      key={branch}
-                      onClick={(event) => {
-                        event.preventDefault();
-                        openEligibility();
-                      }}
-                    >
-                      <span>
-                        {String(previousCount + index + 1).padStart(2, "0")}
-                      </span>
-                      {branch}
-                      <Arrow />
-                    </a>
-                  ))}
-                </div>
-              </details>
+              <button
+                className={activeBranchGroup === index ? "active" : ""}
+                type="button"
+                role="tab"
+                aria-selected={activeBranchGroup === index}
+                onClick={() => setActiveBranchGroup(index)}
+                key={group.title}
+              >
+                <Icon /><b>{group.title}</b><span>{group.branches.length}</span>
+              </button>
+            );
+          })}
+        </div>
+        <div className="active-course-panel" id="course-explorer">
+          <div
+            className="active-course-summary discipline-art-summary"
+            style={{
+              backgroundImage: `url("${publicPath(`/images/${branchGroupBackgrounds[activeBranchGroup]}`)}")`,
+            }}
+          >
+            <span>Discipline 0{activeBranchGroup + 1}</span>
+            <h3>{branchGroups[activeBranchGroup].title}</h3>
+            <p>{branchGroups[activeBranchGroup].copy}</p>
+            <b><i /> {branchGroups[activeBranchGroup].branches.length} branches</b>
+          </div>
+          <div className="active-branch-list">
+            {branchGroups[activeBranchGroup].branches.map((branch, index) => {
+              const previousCount = branchGroups
+                .slice(0, activeBranchGroup)
+                .reduce((total, group) => total + group.branches.length, 0);
+              return (
+                <a
+                  href="#eligibility"
+                  key={branch}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    openEligibility();
+                  }}
+                >
+                  <span>{String(previousCount + index + 1).padStart(2, "0")}</span>
+                  <FileCheck2 />
+                  <div><b>{branch}</b><small>Explore credit-transfer eligibility</small></div>
+                  <MoveRight />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        <div className="course-group-cards">
+          {branchGroups.filter((_, index) => index !== activeBranchGroup).map((group) => {
+            const groupIndex = branchGroups.indexOf(group);
+            const Icon = group.icon;
+            return (
+              <button type="button" onClick={() => setActiveBranchGroup(groupIndex)} key={group.title}>
+                <span><Icon /></span>
+                <div><h3>{group.title} <small>{group.branches.length}</small></h3><p>{group.copy}</p><b>Explore branches <MoveRight /></b></div>
+              </button>
             );
           })}
         </div>
@@ -1611,10 +1897,6 @@ function Home() {
             ></iframe>
           </div>
         </div>
-        <div className="footer-departments-heading">
-          <span>Department directory</span>
-          <p>Choose the team that matches your enquiry.</p>
-        </div>
         <div className="footer-directory">
           <article>
             <h3>Admission enquiry</h3>
@@ -1735,10 +2017,17 @@ function Home() {
           </article>
         </div>
         <div className="footer-bottom">
-          <a className="brand hero-brand" href="#top">
-            <span className="brand-symbol">EA</span>
-            <span className="brand-name">
-              Edu <b>Acharya</b>
+          <a className="footer-brand" href="#top" aria-label="EduAcharya home">
+            <img
+              src={publicPath("/images/logo_sm_black-CY_9RSwn.png")}
+              alt=""
+              aria-hidden="true"
+            />
+            <span>
+              <b>EduAcharya</b>
+              <small>
+                Institute of Advanced Management &amp; Technology Pvt. Ltd.
+              </small>
             </span>
           </a>
           <nav>
