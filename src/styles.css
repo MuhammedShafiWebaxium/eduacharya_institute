@@ -9647,6 +9647,28 @@ h6,
   background: #fffaf7;
   transform: translateY(-50%);
 }
+
+/* Correct eligibility-card content placement */
+.eligibility-review-panel .eligibility-cards article > div {
+  grid-column: 3;
+  grid-row: 1;
+  min-width: 0;
+}
+.eligibility-review-panel .eligibility-cards article > small {
+  grid-column: 4;
+  grid-row: 1;
+  justify-self: end;
+  white-space: nowrap;
+}
+.eligibility-review-panel .eligibility-cards h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  line-height: 1.25;
+}
+.eligibility-review-panel .eligibility-cards p {
+  font-size: 10px;
+  line-height: 1.5;
+}
 @media (max-width: 700px) {
   .eligibility-review-panel:before {
     border-radius: 22px;
@@ -9660,6 +9682,76 @@ h6,
   .transcript-stack { width: 190px; height: 275px; margin: 0 auto; }
   .eligibility-review-panel .eligibility-cards:before,
   .eligibility-review-panel .eligibility-cards article:after { display: none; }
+}
+
+@media (max-width: 700px) {
+  .eligibility-review-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 14px 20px;
+    overflow: hidden;
+    background: linear-gradient(145deg,#082e61,#001a3b);
+    border-radius: 22px;
+  }
+  .eligibility-folder-shell { display: none; }
+  .eligibility-review-panel:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 22px;
+    border: 0;
+    border-radius: 0 0 0 14px;
+    background: #0b2b55;
+    transform: none;
+  }
+  .eligibility-review-title h3 {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+  .transcript-stack {
+    width: min(210px, 72vw);
+    height: 285px;
+  }
+  .eligibility-review-panel .eligibility-cards {
+    width: 100%;
+    gap: 10px;
+  }
+  .eligibility-review-panel .eligibility-cards article,
+  .eligibility-review-panel .eligibility-cards .e1,
+  .eligibility-review-panel .eligibility-cards .e2,
+  .eligibility-review-panel .eligibility-cards .e3,
+  .eligibility-review-panel .eligibility-cards .e4 {
+    position: relative;
+    min-height: 100px;
+    padding: 15px 12px;
+    grid-template-columns: 34px 30px minmax(0,1fr);
+    grid-template-rows: 1fr;
+    gap: 9px;
+  }
+  .eligibility-review-panel .eligibility-cards article > div {
+    grid-column: 3;
+    grid-row: 1;
+    padding-top: 12px;
+  }
+  .eligibility-review-panel .eligibility-cards article > small {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    grid-column: auto;
+    grid-row: auto;
+    font-size: 8px;
+  }
+  .eligibility-review-panel .eligibility-cards h3 { font-size: 14px; }
+  .eligibility-review-panel .eligibility-cards p { font-size: 10px; }
+  .eligibility-assurance {
+    padding-top: 14px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
 }
 @media (max-width: 620px) {
   .site-footer .footer-directory {
@@ -9692,8 +9784,8 @@ h6,
 }
 .eligibility-folder-shell .folder-rear {
   fill: #0a2a54;
-  stroke: rgba(255,255,255,.24);
-  stroke-width: 1.2;
+  stroke: rgba(255,255,255,.1);
+  stroke-width: .6;
 }
 .eligibility-folder-shell .folder-tab-paper {
   fill: #d8ad70;
@@ -9711,5 +9803,21 @@ h6,
 @media (max-width: 700px) {
   .eligibility-folder-shell .folder-front {
     d: path("M24 0H430C460 0 470 35 510 46H970Q994 46 994 72V514Q994 538 970 538H24Q0 538 0 514V24Q0 0 24 0Z");
+  }
+}
+
+@media (max-width: 700px) {
+  .eligibility-folder-shell { display: none; }
+  .eligibility-review-panel:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 22px;
+    border-radius: 0 0 0 14px;
+    background: #0b2b55;
   }
 }

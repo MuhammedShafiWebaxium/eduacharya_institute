@@ -1022,13 +1022,13 @@ function Home() {
             </defs>
             <path
               className="folder-rear"
-              d="M520 25H895Q920 25 927 48L936 78H548Z"
+              d="M472 20H895Q922 20 930 48L944 86H500Z"
             />
             <path className="folder-tab-paper" d="M835 48h68l12 30h-92Z" />
             <path className="folder-tab-paper small" d="M922 52h28l10 26h-47Z" />
             <path
               className="folder-front"
-              d="M30 0H475C505 0 512 42 548 52H960Q990 52 990 82V508Q990 538 960 538H30Q0 538 0 508V30Q0 0 30 0Z"
+              d="M30 0H472Q497 0 514 23L536 45Q544 52 560 52H960Q990 52 990 82V508Q990 538 960 538H30Q0 538 0 508V30Q0 0 30 0Z"
             />
           </svg>
           <div className="eligibility-review-title">
