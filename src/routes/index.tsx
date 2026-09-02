@@ -1007,7 +1007,41 @@ function Home() {
             </a>
           </div>
         </div>
-        <div className="eligibility-cards">
+        <div className="eligibility-review-panel">
+          <svg
+            className="eligibility-folder-shell"
+            viewBox="0 0 1000 540"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="eligibilityFolderGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#0A3269" />
+                <stop offset="1" stopColor="#001A3B" />
+              </linearGradient>
+            </defs>
+            <path
+              className="folder-rear"
+              d="M520 25H895Q920 25 927 48L936 78H548Z"
+            />
+            <path className="folder-tab-paper" d="M835 48h68l12 30h-92Z" />
+            <path className="folder-tab-paper small" d="M922 52h28l10 26h-47Z" />
+            <path
+              className="folder-front"
+              d="M30 0H475C505 0 512 42 548 52H960Q990 52 990 82V508Q990 538 960 538H30Q0 538 0 508V30Q0 0 30 0Z"
+            />
+          </svg>
+          <div className="eligibility-review-title">
+            <span>Eligibility review</span>
+            <h3>What universities consider</h3>
+          </div>
+          <div className="transcript-stack" aria-hidden="true">
+            <img
+              src={publicPath("/images/eligibility-transcript-clean.png")}
+              alt=""
+            />
+          </div>
+          <div className="eligibility-cards">
           {[
             {
               number: "01",
@@ -1015,6 +1049,7 @@ function Home() {
               copy: "Previous credits must come from an institution recognized by the relevant authority and accepted by the receiving university.",
               badge: "Foundation",
               cls: "e1",
+              icon: Landmark,
             },
             {
               number: "02",
@@ -1022,6 +1057,7 @@ function Home() {
               copy: "Completed subjects, syllabus content and learning hours are compared with the new programme for equivalency.",
               badge: "Compared",
               cls: "e2",
+              icon: BookOpen,
             },
             {
               number: "03",
@@ -1029,6 +1065,7 @@ function Home() {
               copy: "Passing grades, GPA, completed semesters and university-specific minimum standards are reviewed.",
               badge: "Individual",
               cls: "e3",
+              icon: FileCheck2,
             },
             {
               number: "04",
@@ -1036,20 +1073,26 @@ function Home() {
               copy: "Transcripts, mark sheets, detailed syllabi and other academic records are required for the formal review.",
               badge: "Required",
               cls: "e4",
+              icon: ClipboardCheck,
             },
-          ].map((item) => (
-            <article className={item.cls} key={item.number}>
-              <span className="eligibility-number">{item.number}</span>
-              <small>{item.badge}</small>
-              <h3>{item.title}</h3>
-              <p>{item.copy}</p>
-              <div className="card-arrow">
-                <Arrow />
-              </div>
-            </article>
-          ))}
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <article className={item.cls} key={item.number}>
+                <span className="eligibility-number">{item.number}</span>
+                <Icon className="eligibility-card-icon" />
+                <small>{item.badge}</small>
+                <div><h3>{item.title}</h3><p>{item.copy}</p></div>
+              </article>
+            );
+          })}
+          </div>
+          <div className="eligibility-assurance">
+            <BadgeCheck />
+            <b>Reviewed against university-specific transfer regulations.</b>
+          </div>
         </div>
-        <div className="eligibility-proof">
+        <div className="eligibility-proof legacy-proof">
           <div>
             <b>50–70%*</b>
             <span>Policy-dependent cap</span>

@@ -9524,3 +9524,192 @@ h6,
 .footer-brand{min-width:0;display:flex;align-items:center;gap:13px;color:#fff}.footer-brand>img{width:72px;height:46px;object-fit:contain;filter:brightness(0) invert(1)}
 .footer-brand>span{display:flex;flex-direction:column;gap:5px}.footer-brand b{font:800 20px/1 Manrope,sans-serif}.footer-brand small{max-width:230px;color:#aebdce;font:700 7px/1.35 Manrope,sans-serif;letter-spacing:.04em;text-transform:uppercase}
 @media(max-width:650px){.site-footer{padding:48px 20px 0}.site-footer .footer-location{margin-bottom:28px}.site-footer .footer-directory{margin-bottom:28px;padding-top:22px}.site-footer .footer-directory article{min-height:0}.site-footer .footer-bottom{grid-template-columns:1fr;gap:18px;padding:27px 0}.site-footer .footer-bottom nav{display:flex}.site-footer .footer-bottom p{display:block;justify-self:start}}
+
+/* Eligibility dossier — reference-matched layout */
+.eligibility-showcase{min-height:650px;padding:58px 5.5vw;display:grid;grid-template-columns:minmax(390px,.78fr) minmax(680px,1.22fr);grid-template-rows:1fr;gap:50px;align-items:center;background:#fffaf7}
+.eligibility-showcase .eligibility-grid{position:absolute;inset:0;opacity:.42;background-size:42px 42px;mask-image:linear-gradient(90deg,transparent,#000 42%,#000 100%)}
+.eligibility-copy{align-self:center;padding:0;max-width:520px}.eligibility-copy h2{max-width:520px;margin:22px 0 24px;font-size:clamp(48px,4.25vw,66px);line-height:1.02}.eligibility-copy>p{max-width:500px;font-size:13px;line-height:1.85}
+.eligibility-callout{max-width:500px;margin:24px 0 22px;padding:18px 20px;border:0;border-radius:16px;background:#fff0e7}.eligibility-callout b{font-size:11px}.eligibility-callout span{font-size:9px;line-height:1.65}
+.eligibility-showcase .hero-buttons{gap:18px}.eligibility-showcase .hero-buttons .button{padding:15px 18px;font-size:11px}
+.eligibility-review-panel{position:relative;isolation:isolate;min-height:520px;padding:30px 34px 20px;display:grid;grid-template-columns:210px 1fr;grid-template-rows:auto 1fr auto;gap:20px 24px;border-radius:28px;background:linear-gradient(145deg,#062b5c,#001b3d);box-shadow:0 18px 45px #061a3633;color:#fff;overflow:hidden}
+.eligibility-review-panel:before{content:"";position:absolute;z-index:-1;right:-40px;top:40px;width:240px;height:190px;opacity:.08;background:repeating-linear-gradient(90deg,transparent 0 22px,#fff 23px 24px)}
+.eligibility-review-title{grid-column:1/-1}.eligibility-review-title>span{color:#ff5d28;font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.eligibility-review-title h3{margin:13px 0 0;color:#fff;font-size:24px}
+.transcript-stack{grid-column:1;grid-row:2;align-self:center;position:relative;height:280px;transform:rotate(-3deg)}.transcript-stack:before,.transcript-stack:after{content:"";position:absolute;inset:10px -8px -10px 8px;border-radius:4px;background:#e8d3ac;transform:rotate(4deg)}.transcript-stack:after{inset:5px -3px -5px 3px;background:#f5ead8;transform:rotate(1deg)}
+.transcript-sheet{position:relative;z-index:1;height:100%;padding:22px 18px;border:1px solid #cabba9;border-radius:3px;background:#fffdf8;color:#7a746e;box-shadow:0 12px 24px #0003;display:flex;flex-direction:column;align-items:center}.transcript-sheet>svg{width:32px}.transcript-sheet>b{margin:8px 0 16px;font-size:11px;letter-spacing:.08em}.transcript-sheet>span{width:100%;height:1px;margin:7px 0;background:#d8d2ca}.transcript-sheet>em{position:absolute;right:12px;bottom:18px;width:63px;height:63px;border:2px solid #f28d26;border-radius:50%;display:grid;place-items:center;color:#f28d26;font:800 8px Manrope;font-style:normal;transform:rotate(-10deg)}.transcript-sheet>em svg{width:25px}
+.eligibility-review-panel .eligibility-cards{grid-column:2;grid-row:2;width:auto;max-width:none;min-height:0;padding:0;display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,1fr);gap:10px;align-self:stretch}
+.eligibility-review-panel .eligibility-cards article,.eligibility-review-panel .eligibility-cards .e1,.eligibility-review-panel .eligibility-cards .e2,.eligibility-review-panel .eligibility-cards .e3,.eligibility-review-panel .eligibility-cards .e4{min-height:0;margin:0;padding:13px 14px;display:grid;grid-template-columns:38px 35px 1fr auto;gap:11px;align-items:center;border:0;border-radius:12px;background:#fffaf7;color:#0b2345;box-shadow:none;transform:none}
+.eligibility-review-panel .eligibility-number{width:31px;height:31px;margin:0;border-radius:50%;background:#ff4301;color:#fff;font-size:10px}.eligibility-card-icon{width:27px;height:27px;color:#0b356f}.eligibility-review-panel .eligibility-cards article>small{position:static;padding:0;background:transparent;color:#ff4301;box-shadow:none;font-size:8px}.eligibility-review-panel .eligibility-cards h3{margin:0 0 4px;font-size:12px}.eligibility-review-panel .eligibility-cards p{max-width:none;margin:0;color:#657187;font-size:8px;line-height:1.45}
+.eligibility-assurance{grid-column:1/-1;padding-top:16px;display:flex;align-items:center;gap:10px;border-top:1px solid #ffffff29;color:#f4f7fb;font-size:10px}.eligibility-assurance svg{width:25px;color:#fff}.legacy-proof{display:none}
+@media(max-width:1100px){.eligibility-showcase{grid-template-columns:1fr;padding:70px 6vw}.eligibility-copy{max-width:680px}.eligibility-review-panel{width:100%;max-width:850px;margin:0 auto}}
+@media(max-width:700px){.eligibility-showcase{padding:58px 20px;gap:35px}.eligibility-copy h2{font-size:45px}.eligibility-review-panel{min-height:0;padding:25px 18px;grid-template-columns:1fr;grid-template-rows:auto auto auto auto;border-radius:22px}.eligibility-review-title{grid-column:1}.transcript-stack{grid-column:1;grid-row:2;width:180px;height:245px;margin:0 auto}.eligibility-review-panel .eligibility-cards{grid-column:1;grid-row:3;margin:0}.eligibility-assurance{grid-column:1;grid-row:4}.eligibility-review-panel .eligibility-cards article,.eligibility-review-panel .eligibility-cards .e1,.eligibility-review-panel .eligibility-cards .e2,.eligibility-review-panel .eligibility-cards .e3,.eligibility-review-panel .eligibility-cards .e4{grid-template-columns:34px 30px 1fr;padding:12px 10px}.eligibility-review-panel .eligibility-cards article>small{grid-column:3}.eligibility-showcase .hero-buttons{align-items:stretch}.eligibility-showcase .hero-buttons .button{width:100%;justify-content:center}}
+
+/* Fluid footer contact cards */
+.site-footer .footer-directory {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 14px;
+}
+.site-footer .footer-directory article {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.site-footer .footer-line {
+  width: 100%;
+  min-width: 0;
+}
+.site-footer .footer-line > span {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.site-footer .footer-line > span a {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Folder silhouette and generated transcript asset */
+.eligibility-review-panel {
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+}
+.eligibility-review-panel:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  border-radius: 28px;
+  background: linear-gradient(145deg,#082e61,#001a3b);
+  clip-path: polygon(0 0,51% 0,57% 9%,100% 9%,100% 100%,0 100%);
+  box-shadow: 0 18px 45px #061a3633;
+}
+.eligibility-review-panel:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 16px;
+  right: 24px;
+  width: 46%;
+  height: 62px;
+  border: 1px solid #ffffff38;
+  border-radius: 14px 14px 0 0;
+  background: #0a2a54;
+  transform: skewX(8deg);
+}
+.transcript-stack {
+  width: 222px;
+  height: 312px;
+  margin-left: -8px;
+  transform: rotate(-2deg);
+}
+.transcript-stack:before,
+.transcript-stack:after,
+.transcript-sheet {
+  display: none;
+}
+.transcript-stack > img {
+  display: block;
+  width: 112%;
+  height: 108%;
+  margin: -4% 0 0 -7%;
+  object-fit: contain;
+  object-position: center;
+  clip-path: none;
+  filter: none;
+}
+.eligibility-review-panel .eligibility-cards {
+  position: relative;
+  overflow: visible;
+}
+.eligibility-review-panel .eligibility-cards:before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 30px;
+  bottom: 30px;
+  border-left: 2px solid #ff4301;
+}
+.eligibility-review-panel .eligibility-cards article:after {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #ff4301;
+  border-radius: 50%;
+  background: #fffaf7;
+  transform: translateY(-50%);
+}
+@media (max-width: 700px) {
+  .eligibility-review-panel:before {
+    border-radius: 22px;
+    clip-path: polygon(0 0,44% 0,52% 5%,100% 5%,100% 100%,0 100%);
+  }
+  .eligibility-review-panel:after {
+    top: 12px;
+    right: 18px;
+    height: 48px;
+  }
+  .transcript-stack { width: 190px; height: 275px; margin: 0 auto; }
+  .eligibility-review-panel .eligibility-cards:before,
+  .eligibility-review-panel .eligibility-cards article:after { display: none; }
+}
+@media (max-width: 620px) {
+  .site-footer .footer-directory {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .site-footer .footer-directory article {
+    padding: 20px 16px;
+  }
+  .site-footer .footer-line {
+    gap: 9px;
+    font-size: 10px;
+  }
+}
+
+/* Precise scalable folder shell */
+.eligibility-review-panel:before,
+.eligibility-review-panel:after {
+  display: none;
+}
+.eligibility-folder-shell {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 16px 20px rgba(5,24,50,.18));
+  pointer-events: none;
+}
+.eligibility-folder-shell .folder-rear {
+  fill: #0a2a54;
+  stroke: rgba(255,255,255,.24);
+  stroke-width: 1.2;
+}
+.eligibility-folder-shell .folder-tab-paper {
+  fill: #d8ad70;
+}
+.eligibility-folder-shell .folder-tab-paper.small {
+  fill: #ead2a6;
+}
+.eligibility-folder-shell .folder-front {
+  fill: url(#eligibilityFolderGradient);
+}
+.eligibility-review-panel > :not(.eligibility-folder-shell) {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 700px) {
+  .eligibility-folder-shell .folder-front {
+    d: path("M24 0H430C460 0 470 35 510 46H970Q994 46 994 72V514Q994 538 970 538H24Q0 538 0 514V24Q0 0 24 0Z");
+  }
+}
