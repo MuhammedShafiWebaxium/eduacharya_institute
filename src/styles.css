@@ -9429,20 +9429,29 @@ h6,
   width: calc(100% - 4px);
   height: 0;
   border: 0;
-  border-top: 2px dashed #ff4301;
+  border-top: 0;
   transform: none;
+}
+.credit-path .path-arrow span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 7px;
+  top: -1px;
+  border-top: 2px dashed #ff4301;
 }
 .credit-path .path-arrow span:after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: -5px;
   right: 0;
-  width: 8px;
-  height: 8px;
+  width: 0;
+  height: 0;
   border: 0;
-  border-top: 2px solid #ff4301;
-  border-right: 2px solid #ff4301;
-  transform: translateY(-50%) rotate(45deg);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid #ff4301;
+  transform: none;
 }
 @media (max-width: 700px) {
   .credit-path .path-arrow {
@@ -9454,18 +9463,27 @@ h6,
     width: 0;
     height: 38px;
     border-top: 0;
-    border-left: 2px dashed #ff4301;
+    border-left: 0;
     transform: none;
+  }
+  .credit-path .path-arrow span:before {
+    left: -1px;
+    right: auto;
+    top: 0;
+    bottom: 7px;
+    border-top: 0;
+    border-left: 2px dashed #ff4301;
   }
   .credit-path .path-arrow span:after {
     top: auto;
     right: auto;
     left: -5px;
     bottom: 0;
-    border-top: 0;
-    border-right: 2px solid #ff4301;
-    border-bottom: 2px solid #ff4301;
-    transform: rotate(45deg);
+    border: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #ff4301;
+    transform: none;
   }
 }
 
@@ -9682,6 +9700,23 @@ h6,
   .transcript-stack { width: 190px; height: 275px; margin: 0 auto; }
   .eligibility-review-panel .eligibility-cards:before,
   .eligibility-review-panel .eligibility-cards article:after { display: none; }
+}
+
+/* Keep benefit-card hover text readable */
+.about .benefit-grid article:not(:first-child):hover {
+  background: #0b2345 !important;
+  border-color: #0b2345 !important;
+  color: #fff;
+}
+.about .benefit-grid article:not(:first-child):hover h3,
+.about .benefit-grid article:not(:first-child):hover p {
+  color: #fff !important;
+}
+.about .benefit-grid article:not(:first-child):hover > span {
+  color: #ff6530 !important;
+}
+.about .benefit-grid article:not(:first-child):hover .benefit-icon {
+  color: #fff;
 }
 
 @media (max-width: 700px) {
